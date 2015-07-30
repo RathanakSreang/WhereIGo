@@ -1,1 +1,20 @@
 @import "bootstrap";
+@import "font-awesome";
+
+.navbar-brand {
+  padding: 0px;
+}
+
+.app-body {  
+  margin-top: 50px;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #9eb9cc;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin: 5px auto;
+}
