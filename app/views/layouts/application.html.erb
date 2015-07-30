@@ -4,12 +4,24 @@
   <title><%= full_title yield(:title) %></title>
   <%= stylesheet_link_tag "application", media:"all", "data-turbolinks-track" => true %>   
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
   <%= render "layouts/shim" %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="col-md-12">
+    <%= render "layouts/header" %>
+  </div>
+  <div class="container app-body">
+    <div class="col-md-12">
+      <% flash.each do |key, value| %>
+        <%= content_tag :div, value, class: "alert alert-#{key}" %>
+      <% end %>
+      <%= yield %>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <%= render "layouts/footer" %>
+  </div>
 </body>
 </html>
